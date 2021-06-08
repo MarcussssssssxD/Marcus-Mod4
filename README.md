@@ -31,4 +31,4 @@
 # İletişim
 * Botla ilgili her hangi bir hata veya soru için [Discord Adresim](https://discord.com/users/799237103195127848)'den ulaşabilirsiniz.
 
-* Yardım almak için [Serendia](https://discord.gg/serendia) sunucusunu ziyaret edebilirsiniz.
+* Yardım almak için [Serendia](https://discord.gg/UnaET8hj3K) sunucusunu ziyaret edebilirsiniz.
