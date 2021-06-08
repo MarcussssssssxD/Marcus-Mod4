@@ -5,7 +5,7 @@ const moment = require('moment')
 require('moment-duration-format')
 const tagData = require('../models/yasaklıtag.js')
 module.exports.run = async(client, message, args, embed) => {
-        if (message.member.hasPermission(8)) return message.channel.send(embed.setDescription(`${message.author}, Bu komutu kullanmak için yeterli yetkiye sahip değilsin!`)).sil(7);
+        if (!message.member.hasPermission(8)) return message.channel.send(embed.setDescription(`${message.author}, Bu komutu kullanmak için yeterli yetkiye sahip değilsin!`)).sil(7);
         let cmd = args[0]
         let data = await tagData.find({ guildID: message.guild.id })
         if (cmd === 'ekle') {
