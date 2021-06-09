@@ -43,7 +43,7 @@ client.on('userUpdate', async(old, nev) => {
     let embed = new Discord.MessageEmbed().setColor('RANDOM').setFooter('Cross was here.').setTimestamp()
     let tagrol = guild.roles.cache.get(ayar.roles.tagRole);
     let log = guild.channels.cache.get(ayar.channels.tagLog)
-        ///if (old.username != nev.username || old.tag != nev.tag || old.discriminator != nev.discriminator) {
+        if (old.username != nev.username || old.tag != nev.tag || old.discriminator != nev.discriminator) {
 
     if (ayar.guild.tagges.some(tag => nev.tag.toLowerCase().includes(tag))) {
         if (!uye.roles.cache.has(tagrol.id)) {
@@ -64,7 +64,7 @@ client.on('userUpdate', async(old, nev) => {
 
         }
     }
-    //  }
+      }
 })
 const tagData = require('./models/yasaklıtag.js');
 client.on('userUpdate', async(old, nev) => {
@@ -89,6 +89,3 @@ client.on('userUpdate', async(old, nev) => {
 })
 
 
-/*client.on("message", async(message) => {
-    message.member.voice.
-})*/
