@@ -27,11 +27,6 @@ module.exports.run = async(client, message, args, embed) => {
     if (member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(embed.setDescription(`${message.member}, Bu kullanıcı sizden üst/aynı pozisyonda.`)).sil(7)
     let embedTime = zaman.replace("m", " Dakika").replace("s", " Saniye").replace("h", " Saat").replace("d", " Gün")
 
-    /*let puan = 0
-    if (memberData.some(s => s.Point >= 5)) {
-        let puan2 = memberData.map((s, i) => s.Point).reduce((a, b) => a + b)
-        if (puan2 == 0 || puan2 == undefined || puan2 == null) { puan = 5; } else { puan = puan2 + 5 }
-    }*/
     if (memberData.some(s => s.Point >= 5)) {
         let puanKontrol = memberData.map((d, index) => d.Point).reduce((a, b) => a + b);
         if (puanKontrol > 75) {
