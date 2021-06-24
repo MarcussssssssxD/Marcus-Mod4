@@ -43,7 +43,7 @@ module.exports = {
 
     guild: {
         guildID: "",
-        tagges: [""], // buraya taglarınızı giriyorsunuz
+        tagges: [""], // buraya taglarınızı giriyorsunuz etiket için: #0001 olarak
         nameTag: "", // buraya tagı varsa ismin başına gelcek tag
         defaultTag: "•", // burda tagı yoksa ismin başına gelcek tag
         banLimit: 5
