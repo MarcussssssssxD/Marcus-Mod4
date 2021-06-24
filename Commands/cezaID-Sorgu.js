@@ -5,7 +5,7 @@ const penalData = require('../models/penal.js')
 const moment = require('moment')
 module.exports.run = async(client, message, args, embed) => {
     if (ayar.roles.muteStaff.some(s => !message.member.roles.cache.has(s)) && !message.member.hasPermission(8)) return message.channel.send(embed.setDescription(`${message.author}, Bu komutu kullanmak için yeterli yetkiye sahip değilsin!`)).sil(7);
-    if (!args[0] || (args[0] && isNaN(args[0]))) return message.channel.send(embed.setDescription(`${message.author}, Hatalı kullanım; \n \`\`\`Örnek: ${this.conf.usages}\`\`\``));
+    if (!args[0] || (args[0] && isNaN(args[0]))) return message.channel.send(embed.setDescription(`${message.author}, Hatalı kullanım; \n \`\`\`Örnek: ${this.config.usage}\`\`\``));
     let data = await penalData.find({ guildID: message.guild.id, cezaID: args[0] });
     if (!data.length) return message.channel.send(embed.setDescription(`Bu ID'ye ait veri bulunamadı.`));
     data.map((d, index) => {
