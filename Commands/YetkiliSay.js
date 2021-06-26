@@ -23,7 +23,7 @@ module.exports.run = async(client, message, args, embed) => {
             aktifunsesyt.array().forEach(async(cross, index) => {
                 setTimeout(async() => {
                     msg.edit(embed.setDescription(`${cross} Yetkilisine özelden mesaj atıldı.`))
-                    cross.send(`Aktifsin fakat seste değilsin lütfen ses kanalına gir.\n**${message.guild.name}**`).catch(err => message.channel.send(`${cross} Aktifsin fakat seste değilsin lütfen ses kanalına gir.`) && msg.edit(new MessageEmbed().setDescription(`${cross} kullanıcısına özelden mesaj gönderilemediği için kanala etiketlendi.`)))
+                    cross.send(`Aktifsin fakat seste değilsin lütfen ses kanalına gir.\n**${message.guild.name}**`).catch(err => message.channel.send(`${cross} Aktifsin fakat seste değilsin lütfen ses kanalına gir.`) && msg.edit(embed.setDescription(`${cross} kullanıcısına özelden mesaj gönderilemediği için kanala etiketlendi.`)))
                 }, index * 1500)
             })
 
